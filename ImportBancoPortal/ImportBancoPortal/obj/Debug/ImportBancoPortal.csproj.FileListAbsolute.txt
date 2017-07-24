@@ -4,3 +4,9 @@ c:\users\igor baesse\documents\visual studio 2017\Projects\ImportBancoPortal\Imp
 c:\users\igor baesse\documents\visual studio 2017\Projects\ImportBancoPortal\ImportBancoPortal\obj\Debug\ImportBancoPortal.csprojResolveAssemblyReference.cache
 c:\users\igor baesse\documents\visual studio 2017\Projects\ImportBancoPortal\ImportBancoPortal\obj\Debug\ImportBancoPortal.exe
 c:\users\igor baesse\documents\visual studio 2017\Projects\ImportBancoPortal\ImportBancoPortal\obj\Debug\ImportBancoPortal.pdb
+C:\REPOSITORIOS\Importbdportal\ImportBancoPortal\ImportBancoPortal\bin\Debug\ImportBancoPortal.exe.config
+C:\REPOSITORIOS\Importbdportal\ImportBancoPortal\ImportBancoPortal\bin\Debug\ImportBancoPortal.exe
+C:\REPOSITORIOS\Importbdportal\ImportBancoPortal\ImportBancoPortal\bin\Debug\ImportBancoPortal.pdb
+C:\REPOSITORIOS\Importbdportal\ImportBancoPortal\ImportBancoPortal\obj\Debug\ImportBancoPortal.csprojResolveAssemblyReference.cache
+C:\REPOSITORIOS\Importbdportal\ImportBancoPortal\ImportBancoPortal\obj\Debug\ImportBancoPortal.exe
+C:\REPOSITORIOS\Importbdportal\ImportBancoPortal\ImportBancoPortal\obj\Debug\ImportBancoPortal.pdb
