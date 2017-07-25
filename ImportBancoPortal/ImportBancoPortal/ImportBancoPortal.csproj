@@ -47,6 +47,7 @@
     <Compile Include="..\..\..\..\..\..\..\REPOSITORIOS\Importbdportal\Program.cs">
       <Link>Program.cs</Link>
     </Compile>
+    <Compile Include="justificativa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

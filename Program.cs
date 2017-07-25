@@ -24,17 +24,17 @@ namespace ImportBancoPortal
 
 
 
-               Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15} {16} {17} {18} {19} {20} {21} {22}{23}{24}{25}{26}{27}{28}{29}{30}{31}{32}{33}{34}{35}{36}",
-                    reader.GetValue(1), reader.GetValue(2), reader.GetValue(3),reader.GetValue(4),reader.GetValue(5),
-                    reader.GetDateTime(6).ToShortDateString(),reader.GetValue(7),reader.GetValue(8),
-                    reader.GetValue(9),reader.GetValue(10), reader.GetValue(11), reader.GetValue(12),
-                    reader.GetValue(13),reader.GetValue(14),reader.GetValue(15), reader.GetValue(16),
-                    reader.GetValue(17),reader.GetValue(18), reader.GetValue(19), reader.GetValue(20), 
-                    reader.GetValue(21), reader.GetValue(22), reader.GetValue(23), reader.GetValue(24), 
-                    reader.GetValue(25), reader.GetValue(26), reader.GetValue(27), reader.GetValue(28),
-                    reader.GetValue(29), reader.GetValue(30), reader.GetValue(31), reader.GetValue(32),
-                    reader.GetValue(33), reader.GetValue(34), reader.GetValue(35), reader.GetValue(36), 
-                    reader.GetValue(37));
+               //Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15} {16} {17} {18} {19} {20} {21} {22}{23}{24}{25}{26}{27}{28}{29}{30}{31}{32}{33}{34}{35}{36}",
+               //     reader.GetValue(1), reader.GetValue(2), reader.GetValue(3),reader.GetValue(4),reader.GetValue(5),
+               //     reader.GetDateTime(6).ToShortDateString(),reader.GetValue(7),reader.GetValue(8),
+               //     reader.GetValue(9),reader.GetValue(10), reader.GetValue(11), reader.GetValue(12),
+               //     reader.GetValue(13),reader.GetValue(14),reader.GetValue(15), reader.GetValue(16),
+               //     reader.GetValue(17),reader.GetValue(18), reader.GetValue(19), reader.GetValue(20), 
+               //     reader.GetValue(21), reader.GetValue(22), reader.GetValue(23), reader.GetValue(24), 
+               //     reader.GetValue(25), reader.GetValue(26), reader.GetValue(27), reader.GetValue(28),
+               //     reader.GetValue(29), reader.GetValue(30), reader.GetValue(31), reader.GetValue(32),
+               //     reader.GetValue(33), reader.GetValue(34), reader.GetValue(35), reader.GetValue(36), 
+               //     reader.GetValue(37));
 
 
 
@@ -105,7 +105,7 @@ namespace ImportBancoPortal
 
             }
 
-
+             HoraExtra();
 
 
 
@@ -124,6 +124,86 @@ namespace ImportBancoPortal
                 return 0;
 
             }
+        }
+
+
+        //public void BuscarJustificativas()
+        //{
+
+        //    OleDbConnection Connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\dbportal.mdb");
+        //    Connection.Open();
+        //    OleDbCommand Comand = new OleDbCommand("select * from justificativaponto ", Connection);
+        //    OleDbDataReader reader = Comand.ExecuteReader();
+
+        //    while (reader.Read())
+        //    {
+        //        Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} ", reader.GetInt32(0), reader.GetString(1), reader.GetString(2), 
+        //            reader.GetDateTime(3), reader.GetDateTime(4),reader.GetString(5) ,reader.GetString(6), reader.GetString(7), Convert.ToString(reader.GetValue(8)), Convert.ToString(reader.GetValue(9)));
+        //    }
+
+
+        //}
+
+
+        //public void BuscarFerias()
+        //{
+
+        //    OleDbConnection Connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\dbportal.mdb");
+        //    Connection.Open();
+        //    OleDbCommand Comand = new OleDbCommand("select * from ferias ", Connection);
+        //    OleDbDataReader reader = Comand.ExecuteReader();
+
+        //    while (reader.Read())
+        //    {
+        //        Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14} {15} {16}  ", Convert.ToString(reader.GetValue(0)), Convert.ToString(reader.GetValue(1)), Convert.ToString(reader.GetValue(2)), Convert.ToString(reader.GetValue(3)), Convert.ToString(reader.GetValue(4)), Convert.ToString(reader.GetValue(5)), Convert.ToString(reader.GetValue(6)), Convert.ToString(reader.GetValue(7)), Convert.ToString(reader.GetValue(8)), Convert.ToString(reader.GetValue(9)), Convert.ToString(reader.GetValue(10)), Convert.ToString(reader.GetValue(11)), Convert.ToString(reader.GetValue(12)), Convert.ToString(reader.GetValue(13)), Convert.ToString(reader.GetValue(14)), Convert.ToString(reader.GetValue(15)), Convert.ToString(reader.GetValue(16)), Convert.ToString(reader.GetValue(17)));
+               
+        //    }
+
+        //    Console.Read();
+        //}
+        static void HoraExtra()
+        {
+
+            OleDbConnection Connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\dbportal.mdb");
+            Connection.Open();
+            OleDbCommand Comand = new OleDbCommand("select * from horasextras ", Connection);
+            OleDbDataReader reader = Comand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14}   ", Convert.ToString(reader.GetValue(0)), Convert.ToString(reader.GetValue(1)), 
+                    Convert.ToString(reader.GetValue(2)), Convert.ToString(reader.GetValue(3)), Convert.ToString(reader.GetValue(4)),
+                    Convert.ToString(reader.GetValue(5)), Convert.ToString(reader.GetValue(6)), Convert.ToString(reader.GetValue(7)),
+                    Convert.ToString(reader.GetValue(8)), Convert.ToString(reader.GetValue(9)), Convert.ToString(reader.GetValue(10)),
+                    Convert.ToString(reader.GetValue(11)), Convert.ToString(reader.GetValue(12)), Convert.ToString(reader.GetValue(13)), 
+                    Convert.ToString(reader.GetValue(14)));
+
+            }
+
+            Console.Read();
+        }
+
+
+        static void Ju()
+        {
+
+            OleDbConnection Connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\dbportal.mdb");
+            Connection.Open();
+            OleDbCommand Comand = new OleDbCommand("select * from horasextras ", Connection);
+            OleDbDataReader reader = Comand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12} {13} {14}   ", Convert.ToString(reader.GetValue(0)), Convert.ToString(reader.GetValue(1)),
+                    Convert.ToString(reader.GetValue(2)), Convert.ToString(reader.GetValue(3)), Convert.ToString(reader.GetValue(4)),
+                    Convert.ToString(reader.GetValue(5)), Convert.ToString(reader.GetValue(6)), Convert.ToString(reader.GetValue(7)),
+                    Convert.ToString(reader.GetValue(8)), Convert.ToString(reader.GetValue(9)), Convert.ToString(reader.GetValue(10)),
+                    Convert.ToString(reader.GetValue(11)), Convert.ToString(reader.GetValue(12)), Convert.ToString(reader.GetValue(13)),
+                    Convert.ToString(reader.GetValue(14)));
+
+            }
+
+            Console.Read();
         }
     }
 }
